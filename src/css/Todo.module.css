@@ -1,0 +1,13 @@
+.task {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  color: #fff;
+  margin: 15px 0px;
+  align-items: center;
+  font-weight: 700;
+}
+.task button {
+  padding: 7px 15px;
+}
