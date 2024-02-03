@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../css/Form.module.css";
 import { useState } from "react";
+import { toast } from "react-toastify";
 function Form({ addTask }) {
   const [task, setTask] = useState("");
   function handleSubmit(e) {
@@ -13,6 +14,12 @@ function Form({ addTask }) {
       };
       setTask("");
       addTask(obj);
+    } else {
+      console.log("working");
+      toast.error("Please fill the input !", {
+        position: "top-right",
+        autoClose: 3000,
+      });
     }
   }
   return (

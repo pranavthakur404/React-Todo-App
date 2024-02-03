@@ -4,11 +4,12 @@ import "./App.css";
 import Form from "./components/Form";
 import Todo from "./components/Todo";
 import Todos from "./components/Todos";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   const [todo, setTodo] = useState([
-    { id: 1, title: "Learn Javascript", completed: false },
-    { id: 2, title: "Learn React", completed: false },
-    { id: 3, title: "Learn Angular", completed: false },
+    { id: 1, title: "Dummy Task", completed: false },
   ]);
 
   function addTask(obj) {
@@ -46,6 +47,7 @@ function App() {
         deleteTask={deleteTask}
         upadateStatus={upadateStatus}
       />
+      <ToastContainer />
     </main>
   );
 }
